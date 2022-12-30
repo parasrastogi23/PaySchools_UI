@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from "react-native";
 import EventGridTile from "../components/EventGridTile";
-import { CATEGORIES } from "../Data/dummy-data";
+import { CATEGORIES } from "../data/dummy-data";
 import SearchBar from "../components/Searchbar";
 
 function EventSearchScreen({ navigation }) {
