@@ -36,16 +36,18 @@ const styles = StyleSheet.create({
     borderColor: "white",
     borderWidth: 1,
     padding: 2,
-    margin:20,
+    margin:5,
     color:'white',
+   
   },
 
   eventsInput: {
     borderColor: "white",
     borderWidth: 1,
     padding: 2,
-    margin:20,
+    margin:5,
     color:'white',
+   
   },
 
   searchText:{

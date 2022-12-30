@@ -26,15 +26,15 @@ function EventSearchScreen({ navigation }) {
   }
 
   return (
+    
     <View style={styles.rootContainer}>
       <View style={styles.ImageContainer}>
-        <View>
+        
         <Image
-          source={require("../assets/psc-logo.png")}
+          source={require("../assets/logo-white.png")}
           style={styles.Imagestyle}
-          resizeMode='contain'
         />
-        </View>
+        
       </View>
       <View style={styles.searchBar}>
         <SearchBar />
@@ -48,6 +48,7 @@ function EventSearchScreen({ navigation }) {
         />
       </View>
     </View>
+   
   );
 }
 
@@ -64,20 +65,16 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-    flex: 1,
+
     borderColor: "black",
     borderWidth: 2,
-    marginTop: 25,
     height: '10%',
   },
   ImageContainer: {
-    width: 150,
-    height: '10%',
-    flex:1,
-    margin:10
+    backgroundColor:'black'
   },
 
   eventContainer:{
-    flex:8
+
   }
 });
