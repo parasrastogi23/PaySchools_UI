@@ -1,4 +1,4 @@
-import { View, TextInput, Text, StyleSheet, Pressable } from "react-native";
+import { View, TextInput, Text, StyleSheet, Pressable , Dimensions} from "react-native";
 
 function SearchBar() {
   return (
@@ -15,13 +15,13 @@ function SearchBar() {
     </View>
   );
 }
-
+const deviceWidth = Dimensions.get('window').width; 
 export default SearchBar;
 
 const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,
-    flexDirection: "row",
+    flexDirection: deviceWidth < 550 ? 'column' : 'row',
     backgroundColor:'black'
   },
 

@@ -1,6 +1,6 @@
 import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 
-function EventGridTile({ title, color }) {
+function EventGridTile({ title, color ,GridPress}) {
   return (
     <View style={styles.outerView}>
       <Pressable
@@ -9,6 +9,7 @@ function EventGridTile({ title, color }) {
           pressed ? styles.buttonPressed : null,
         ]}
         android_ripple={{ color: "#ccc" }}
+        onPress={GridPress}
       >
         <View style={[styles.innerContainer,{ backgroundColor: color }]}>
           <Text style={styles.title}>{title}</Text>

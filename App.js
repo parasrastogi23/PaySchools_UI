@@ -10,6 +10,7 @@ import {
   FlatList,
   ImageBackground,
   StatusBar,
+  SafeAreaView
 } from "react-native";
 import GoalItem from "./components/goalItems";
 import EventSearchScreen from "./Screens/EventSearchScreen";
@@ -30,18 +31,20 @@ export default function App() {
 
   return (
     <>
+    {/* <SafeAreaView>
       <StatusBar style="light" />
-      <ImageBackground source={require("./assets/background-application.png")}>
-        {/* <NavigationContainer theme={MyTheme}>
+      <ImageBackground source={require("./assets/background-application.png")}> */}
+        <NavigationContainer theme={MyTheme}>
           <stack.Navigator initialRouteName="Dashboard">
             <stack.Screen name="Dashboard" component={EventSearchScreen} />
             <stack.Screen name="EventDetails" component={EventDetailsScreen} />
           </stack.Navigator>
-        </NavigationContainer> */}
-        <View>
+        </NavigationContainer>
+        {/* <View>
           <EventSearchScreen />
         </View>
       </ImageBackground>
+      </SafeAreaView> */}
     </>
   );
 }
