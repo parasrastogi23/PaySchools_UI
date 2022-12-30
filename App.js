@@ -30,6 +30,7 @@ export default function App() {
       <View style={{ marginTop: 50, marginLeft: 20 }}>
         <Text>
           <Text>My Orders</Text>
+          <Text>My Orders</Text>
         </Text>
       </View>
       <TextInput placeholder="text here...." onChangeText={inputHandler} />
