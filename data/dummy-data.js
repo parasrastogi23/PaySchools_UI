@@ -1,18 +1,31 @@
 import Category from '../models/category';
 import Meal from '../models/meal';
 
+// export const CATEGORIES = [
+//   new Category('c1', 'Italian', '#f5428d'),
+//   new Category('c2', 'Quick & Easy', '#f54242'),
+//   new Category('c3', 'Hamburgers', '#f5a442'),
+//   new Category('c4', 'German', '#f5d142'),
+//   new Category('c5', 'Light & Lovely', '#368dff'),
+//   new Category('c6', 'Exotic', '#41d95d'),
+//   new Category('c7', 'Breakfast', '#9eecff'),
+//   new Category('c8', 'Asian', '#b9ffb0'),
+//   new Category('c9', 'French', '#ffc7ff'),
+//   new Category('c10', 'Summer', '#47fced')
+// ];
+
 export const CATEGORIES = [
-  new Category('c1', 'Italian', '#f5428d'),
-  new Category('c2', 'Quick & Easy', '#f54242'),
-  new Category('c3', 'Hamburgers', '#f5a442'),
-  new Category('c4', 'German', '#f5d142'),
-  new Category('c5', 'Light & Lovely', '#368dff'),
-  new Category('c6', 'Exotic', '#41d95d'),
-  new Category('c7', 'Breakfast', '#9eecff'),
-  new Category('c8', 'Asian', '#b9ffb0'),
-  new Category('c9', 'French', '#ffc7ff'),
-  new Category('c10', 'Summer', '#47fced')
-];
+    new Category('c1', 'Event1', '#f5428d'),
+    new Category('c2', 'Event2', '#f54242'),
+    new Category('c3', 'Event3', '#f5a442'),
+    new Category('c4', 'Event4', '#f5d142'),
+    new Category('c5', 'Event5', '#368dff'),
+    new Category('c6', 'Event6', '#41d95d'),
+    new Category('c7', 'Event7', '#9eecff'),
+    new Category('c8', 'Event8', '#b9ffb0'),
+    new Category('c9', 'Event9', '#ffc7ff'),
+    new Category('c10','Event10', '#47fced')
+  ];
 
 export const MEALS = [
   new Meal(
