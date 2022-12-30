@@ -10,6 +10,7 @@ import {
   FlatList,
 } from "react-native";
 import GoalItem from "./components/goalItems";
+import EventSearchScreen from "./Screens/EventSearchScreen";
 
 export default function App() {
   const [enteredEventText, setEnteredEventText] = useState("");
@@ -42,6 +43,7 @@ export default function App() {
           return <GoalItem text={itemData.item} />;
         }}
       ></FlatList>
+      <EventSearchScreen />
     </View>
   );
 }
