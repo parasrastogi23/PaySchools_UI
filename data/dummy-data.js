@@ -15,16 +15,16 @@ import Meal from '../models/meal';
 // ];
 
 export const CATEGORIES = [
-    new Category('c1', 'Event1', '#f5428d'),
-    new Category('c2', 'Event2', '#f54242'),
-    new Category('c3', 'Event3', '#f5a442'),
-    new Category('c4', 'Event4', '#f5d142'),
-    new Category('c5', 'Event5', '#368dff'),
-    new Category('c6', 'Event6', '#41d95d'),
-    new Category('c7', 'Event7', '#9eecff'),
-    new Category('c8', 'Event8', '#b9ffb0'),
-    new Category('c9', 'Event9', '#ffc7ff'),
-    new Category('c10','Event10', '#47fced')
+    new Category('c1', 'https://binaries.templates.cdn.office.net/support/templates/en-us/lt44605836_quantized.png', '#f5428d'),
+    new Category('c2', 'https://www.adobe.com/express/create/poster/media_1e8b8a448fd0ce34e00e3f97f278969d5fdd2b292.jpeg?width=400&format=jpeg&optimize=medium', '#f54242'),
+    new Category('c3', 'https://static.vecteezy.com/system/resources/previews/000/542/362/original/vector-summer-event-poster.jpg', '#f5a442'),
+    new Category('c4', 'https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/5d70b2ab5fae1_template_image_1567666859.webp', '#f5d142'),
+    new Category('c5', 'https://piktochart.com/wp-content/uploads/2018/02/4-4700104.jpg', '#368dff'),
+    new Category('c6', 'https://img.freepik.com/free-vector/music-event-poster-template-with-colorful-shapes_1361-1591.jpg?w=2000', '#41d95d'),
+    new Category('c7', 'https://venngage-wordpress-gallery.s3.amazonaws.com/uploads/2018/10/25.jpg', '#9eecff'),
+    new Category('c8', 'https://s3.amazonaws.com/thumbnails.venngage.com/template/112a39f4-2d97-44aa-ae3a-0e95a60abbce.png', '#b9ffb0'),
+    new Category('c9', 'https://imgv3.fotor.com/images/side/Fotor-event-poster-sideimage.png', '#ffc7ff'),
+    new Category('c10','https://payload.cargocollective.com/1/4/130380/1713708/FW_TACOCONTEST_POSTER_07rgbWEB_670.jpg', '#47fced')
   ];
 
 export const MEALS = [

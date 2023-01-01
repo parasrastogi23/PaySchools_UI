@@ -1,5 +1,3 @@
-function EventDetailsScreen(){
-
-}
+function EventDetailsScreen() {}
 
 export default EventDetailsScreen;
