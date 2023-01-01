@@ -5,10 +5,14 @@ import {
   FlatList,
   Image,
   StyleSheet,
+  ImageBackground,
 } from "react-native";
 import EventGridTile from "../components/EventGridTile";
 import { CATEGORIES } from "../data/dummy-data";
 import SearchBar from "../components/Searchbar";
+import HeaderComponent from "../components/headerComponent";
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { FontAwesome5 } from '@expo/vector-icons'; 
 
 function EventSearchScreen({ navigation }) {
   function renderEvents(itemData) {
@@ -27,29 +31,26 @@ function EventSearchScreen({ navigation }) {
   }
 
   return (
-    
-    <View style={styles.rootContainer}>
-      <View style={styles.ImageContainer}>
-        
-        <Image
-          source={require("../assets/logo-white.png")}
-          style={styles.Imagestyle}
-        />
-        
+    <ImageBackground source={require("../assets/background-application.png")}>
+      <View style={styles.rootContainer}>
+      
+
+        <View>
+          <HeaderComponent />
+        </View>
+        <View style={styles.searchBar}>
+          <SearchBar />
+        </View>
+        <View style={styles.eventContainer}>
+          <FlatList
+            data={CATEGORIES}
+            keyExtractor={(item) => item.id}
+            renderItem={renderEvents}
+            numColumns={2}
+          />
+        </View>
       </View>
-      <View style={styles.searchBar}>
-        <SearchBar />
-      </View>
-      <View style={styles.eventContainer}>
-        <FlatList
-          data={CATEGORIES}
-          keyExtractor={(item) => item.id}
-          renderItem={renderEvents}
-          numColumns={2}
-        />
-      </View>
-    </View>
-   
+    </ImageBackground>
   );
 }
 
@@ -57,8 +58,8 @@ export default EventSearchScreen;
 
 const styles = StyleSheet.create({
   Imagestyle: {
-    width: 350,
-    height: 150,
+    // width: 350,
+    // height: 150,
   },
 
   rootContainer: {
@@ -66,16 +67,11 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-
-    borderColor: "black",
-    borderWidth: 2,
-    height: '10%',
+  
   },
   ImageContainer: {
-    backgroundColor:'black'
+    // backgroundColor:'black'
   },
 
-  eventContainer:{
-
-  }
+  eventContainer: {},
 });

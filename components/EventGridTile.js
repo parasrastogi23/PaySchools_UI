@@ -1,6 +1,13 @@
-import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+  Platform,
+  Image,
+} from "react-native";
 
-function EventGridTile({ title, color ,GridPress}) {
+function EventGridTile({ title, color, GridPress }) {
   return (
     <View style={styles.outerView}>
       <Pressable
@@ -11,9 +18,16 @@ function EventGridTile({ title, color ,GridPress}) {
         android_ripple={{ color: "#ccc" }}
         onPress={GridPress}
       >
-        <View style={[styles.innerContainer,{ backgroundColor: color }]}>
+        <Image
+          style={styles.logo}
+          source={{
+            uri: title,
+          }}
+          resizeMode={"stretch"}
+        />
+        {/* <View style={[styles.innerContainer, { backgroundColor: color }]}>
           <Text style={styles.title}>{title}</Text>
-        </View>
+        </View> */}
       </Pressable>
     </View>
   );
@@ -22,6 +36,11 @@ function EventGridTile({ title, color ,GridPress}) {
 export default EventGridTile;
 
 const styles = StyleSheet.create({
+  logo: {
+    width: "100%",
+    height: "100%",
+    borderRadius: 8,
+  },
   outerView: {
     flex: 1,
     margin: 20,
