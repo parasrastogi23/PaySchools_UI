@@ -13,7 +13,8 @@ import SearchBar from "../components/Searchbar";
 function EventSearchScreen({ navigation }) {
   function renderEvents(itemData) {
     function pressHandler() {
-      navigation.navigate("EventDetails");
+     navigation.navigate("EventDetails");
+     //navigation.navigate("ChooseOrder");
       console.log("navigation Success");
     }
     return (

@@ -17,6 +17,8 @@ import EventSearchScreen from "./Screens/EventSearchScreen";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import EventDetailsScreen from "./Screens/EventDetailsScreen";
+import ChooseOrderScreen from "./Screens/ChooseOrderScreen";
+
 
 export default function App() {
   const stack = createNativeStackNavigator();
@@ -38,6 +40,7 @@ export default function App() {
           <stack.Navigator initialRouteName="Dashboard">
             <stack.Screen name="Dashboard" component={EventSearchScreen} />
             <stack.Screen name="EventDetails" component={EventDetailsScreen} />
+            {/* <stack.Screen name="ChooseOrder" component={ChooseOrderScreen} /> */}
           </stack.Navigator>
         </NavigationContainer>
         {/* <View>
