@@ -1,6 +1,7 @@
+
 import Category from '../models/category';
 import Meal from '../models/meal';
-
+import CartItems from '../models/cartItems'
 // export const CATEGORIES = [
 //   new Category('c1', 'Italian', '#f5428d'),
 //   new Category('c2', 'Quick & Easy', '#f54242'),
@@ -14,17 +15,106 @@ import Meal from '../models/meal';
 //   new Category('c10', 'Summer', '#47fced')
 // ];
 
+
+export const CARTITEMS = [
+  new CartItems(
+    'ci1',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    },
+      {
+      id:'2',
+      items: 'Ticket-2',
+      price: '1.00',
+      quantity: '2',
+      subTotal:'22.00'
+    }]
+  ),
+  new CartItems(
+    'ci2',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    }]
+  ),
+  new CartItems(
+    'ci3',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    }]
+  ),new CartItems(
+    'ci1',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    },
+      {
+      id:'2',
+      items: 'Ticket-2',
+      price: '1.00',
+      quantity: '2',
+      subTotal:'22.00'
+    }]
+  ),
+  new CartItems(
+    'ci2',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    }]
+  ),
+  new CartItems(
+    'ci3',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    }]
+  )
+]
+
 export const CATEGORIES = [
-    new Category('c1', 'Event1', '#f5428d'),
-    new Category('c2', 'Event2', '#f54242'),
-    new Category('c3', 'Event3', '#f5a442'),
-    new Category('c4', 'Event4', '#f5d142'),
-    new Category('c5', 'Event5', '#368dff'),
-    new Category('c6', 'Event6', '#41d95d'),
-    new Category('c7', 'Event7', '#9eecff'),
-    new Category('c8', 'Event8', '#b9ffb0'),
-    new Category('c9', 'Event9', '#ffc7ff'),
-    new Category('c10','Event10', '#47fced')
+    new Category('c1', 'https://binaries.templates.cdn.office.net/support/templates/en-us/lt44605836_quantized.png', '#f5428d'),
+    new Category('c2', 'https://imnda.ie/wp-content/uploads/2019/03/Poster-Landscape-mode-in-PNG.png', '#f54242'),
+    new Category('c3', 'https://static.vecteezy.com/system/resources/previews/000/542/362/original/vector-summer-event-poster.jpg', '#f5a442'),
+    new Category('c4', 'https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/5d70b2ab5fae1_template_image_1567666859.webp', '#f5d142'),
+    new Category('c5', 'https://c8.alamy.com/comp/2C6410K/poster-template-with-wild-mountains-landscape-design-element-for-banner-flyer-card-vector-illustration-2C6410K.jpg', '#368dff'),
+    new Category('c6', 'https://img.freepik.com/free-vector/music-event-poster-template-with-colorful-shapes_1361-1591.jpg?w=2000', '#41d95d'),
+    new Category('c7', 'https://venngage-wordpress-gallery.s3.amazonaws.com/uploads/2018/10/25.jpg', '#9eecff'),
+    new Category('c8', 'https://s3.amazonaws.com/thumbnails.venngage.com/template/112a39f4-2d97-44aa-ae3a-0e95a60abbce.png', '#b9ffb0'),
+    new Category('c9', 'https://imgv3.fotor.com/images/side/Fotor-event-poster-sideimage.png', '#ffc7ff'),
+    new Category('c10','https://payload.cargocollective.com/1/4/130380/1713708/FW_TACOCONTEST_POSTER_07rgbWEB_670.jpg', '#47fced')
   ];
 
 export const MEALS = [
@@ -348,3 +438,4 @@ export const MEALS = [
     true
   )
 ];
+
