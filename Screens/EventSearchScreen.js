@@ -21,7 +21,8 @@ function searchEvent(){
 function EventSearchScreen({ navigation }) {
   function renderEvents(itemData) {
     function pressHandler() {
-      navigation.navigate("EventDetails");
+     navigation.navigate("EventDetails");
+     //navigation.navigate("ChooseOrder");
       console.log("navigation Success");
     }
 
@@ -31,9 +32,14 @@ function EventSearchScreen({ navigation }) {
         title={itemData.item.title}
         color={itemData.item.color}
         GridPress={pressHandler}
+
       />
     );
   }
+
+   function cartPressHandler() {
+       navigation.navigate("CartScreen");
+    }
 
   return (
     
@@ -64,8 +70,8 @@ export default EventSearchScreen;
 
 const styles = StyleSheet.create({
   Imagestyle: {
-    // width: 350,
-    // height: 150,
+    width: 100,
+    height: 40,
   },
 
   rootContainer: {
@@ -73,7 +79,9 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-  
+    borderColor: "black",
+    borderWidth: 2,
+    height: '10%',
   },
   ImageContainer: {
     // backgroundColor:'black'

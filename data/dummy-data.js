@@ -1,6 +1,7 @@
+
 import Category from '../models/category';
 import Meal from '../models/meal';
-
+import CartItems from '../models/cartItems'
 // export const CATEGORIES = [
 //   new Category('c1', 'Italian', '#f5428d'),
 //   new Category('c2', 'Quick & Easy', '#f54242'),
@@ -13,6 +14,95 @@ import Meal from '../models/meal';
 //   new Category('c9', 'French', '#ffc7ff'),
 //   new Category('c10', 'Summer', '#47fced')
 // ];
+
+
+export const CARTITEMS = [
+  new CartItems(
+    'ci1',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    },
+      {
+      id:'2',
+      items: 'Ticket-2',
+      price: '1.00',
+      quantity: '2',
+      subTotal:'22.00'
+    }]
+  ),
+  new CartItems(
+    'ci2',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    }]
+  ),
+  new CartItems(
+    'ci3',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    }]
+  ),new CartItems(
+    'ci1',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    },
+      {
+      id:'2',
+      items: 'Ticket-2',
+      price: '1.00',
+      quantity: '2',
+      subTotal:'22.00'
+    }]
+  ),
+  new CartItems(
+    'ci2',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    }]
+  ),
+  new CartItems(
+    'ci3',
+    'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
+    '06-03-2022',
+    [{
+      id:'1',
+      items: 'Ticket-1',
+      price: '5.00',
+      quantity: '2',
+      subTotal:'10.00'
+    }]
+  )
+]
 
 export const CATEGORIES = [
     new Category('c1', 'https://binaries.templates.cdn.office.net/support/templates/en-us/lt44605836_quantized.png', '#f5428d'),
@@ -348,3 +438,4 @@ export const MEALS = [
     true
   )
 ];
+

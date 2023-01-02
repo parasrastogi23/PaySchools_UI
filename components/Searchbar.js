@@ -25,6 +25,9 @@ function SearchBar({searchPress}) {
           </View>
         </Pressable>
       </View>
+      <Pressable  onPress={CartPress}>
+        <Text style={styles.eventText}>Cart</Text>
+      </Pressable>
     </View>
   );
 }
