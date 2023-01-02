@@ -14,12 +14,18 @@ import HeaderComponent from "../components/headerComponent";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { FontAwesome5 } from '@expo/vector-icons'; 
 
+
+function searchEvent(){
+      console.log('search applied');
+}
 function EventSearchScreen({ navigation }) {
   function renderEvents(itemData) {
     function pressHandler() {
       navigation.navigate("EventDetails");
       console.log("navigation Success");
     }
+
+  
     return (
       <EventGridTile
         title={itemData.item.title}
@@ -30,6 +36,7 @@ function EventSearchScreen({ navigation }) {
   }
 
   return (
+    
     <ImageBackground source={require("../assets/background-application.png")}>
       <View style={styles.rootContainer}>
       
@@ -38,7 +45,7 @@ function EventSearchScreen({ navigation }) {
           <HeaderComponent />
         </View>
         <View style={styles.searchBar}>
-          <SearchBar />
+          <SearchBar searchPress={searchEvent}/>
         </View>
         <View style={styles.eventContainer}>
           <FlatList

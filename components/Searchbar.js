@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 
-function SearchBar() {
+function SearchBar({searchPress}) {
   return (
     <View style={styles.rootContainer}>
       <Text style={styles.eventText}>Event Search</Text>
@@ -18,7 +18,7 @@ function SearchBar() {
         style={styles.eventsInput}
       />
       <View>
-        <Pressable style={styles.searchButton}>
+        <Pressable style={styles.searchButton} onPress={searchPress}>
           <View style={styles.searchView}>
             <FontAwesome5 name="search" size={18} color="white" />
             <Text style={styles.searchText}> Search</Text>

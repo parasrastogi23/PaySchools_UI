@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   outerView: {
     flex: 1,
-    margin: 20,
+    margin: 10,
     elevation: 4,
     borderRadius: 5,
     height: 100,
