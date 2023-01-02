@@ -26,9 +26,14 @@ function EventSearchScreen({ navigation }) {
         title={itemData.item.title}
         color={itemData.item.color}
         GridPress={pressHandler}
+
       />
     );
   }
+
+   function cartPressHandler() {
+       navigation.navigate("CartScreen");
+    }
 
   return (
     <ImageBackground source={require("../assets/background-application.png")}>
@@ -39,7 +44,7 @@ function EventSearchScreen({ navigation }) {
           <HeaderComponent />
         </View>
         <View style={styles.searchBar}>
-          <SearchBar />
+          <SearchBar CartPress={cartPressHandler} />
         </View>
         <View style={styles.eventContainer}>
           <FlatList
@@ -58,8 +63,8 @@ export default EventSearchScreen;
 
 const styles = StyleSheet.create({
   Imagestyle: {
-    // width: 350,
-    // height: 150,
+    width: 100,
+    height: 40,
   },
 
   rootContainer: {
@@ -67,7 +72,9 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-  
+    borderColor: "black",
+    borderWidth: 2,
+    height: '10%',
   },
   ImageContainer: {
     // backgroundColor:'black'

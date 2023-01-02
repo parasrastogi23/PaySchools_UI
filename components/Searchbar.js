@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 
-function SearchBar() {
+function SearchBar({CartPress}) {
   return (
     <View style={styles.rootContainer}>
       <Text style={styles.eventText}>Event Search</Text>
@@ -25,6 +25,9 @@ function SearchBar() {
           </View>
         </Pressable>
       </View>
+      <Pressable  onPress={CartPress}>
+        <Text style={styles.eventText}>Cart</Text>
+      </Pressable>
     </View>
   );
 }
