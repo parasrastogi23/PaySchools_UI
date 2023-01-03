@@ -9,7 +9,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import EventDetailsScreen from "./Screens/EventDetailsScreen";
 
-import CartCheckoutScreen from "./Screens/CartCheckoutScreen";
+import CartCheckoutScreen from "./Screens/CartCheckoutScreen"
+import OrderedPreviewScreen from "./Screens/OrderedPreviewScreen";
 
 export default function App() {
   const stack = createNativeStackNavigator();
@@ -65,6 +66,7 @@ export default function App() {
           />
           <stack.Screen name="EventDetails" component={EventDetailsScreen} />
           <stack.Screen name="CartScreen" component={CartCheckoutScreen} />
+          <stack.Screen name="OrderedPreview" component={OrderedPreviewScreen} />
         </stack.Navigator>
       </NavigationContainer>
       {/* <View>

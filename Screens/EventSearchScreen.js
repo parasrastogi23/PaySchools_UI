@@ -1,4 +1,4 @@
-import { View, FlatList, StyleSheet, ImageBackground } from "react-native";
+import { View, FlatList, StyleSheet, ImageBackground, Button } from "react-native";
 import EventGridTile from "../components/EventGridTile";
 import { CATEGORIES } from "../data/dummy-data";
 import SearchBar from "../components/Searchbar";
@@ -28,6 +28,11 @@ function EventSearchScreen({ navigation }) {
     navigation.navigate("CartScreen");
   }
 
+  function viewTicketSummary(){
+    console.log('enter in ticketSummary func')
+    navigation.navigate("OrderedPreview");
+  }
+
   return (
     <ImageBackground source={require("../assets/background-application.png")}>
       <View style={styles.rootContainer}>
@@ -36,6 +41,9 @@ function EventSearchScreen({ navigation }) {
         </View>
         <View style={styles.searchBar}>
           <SearchBar searchPress={searchEvent} />
+        </View>
+        <View>
+          <Button title="Ticket Summary" style={styles.ticketSummary} onPress={viewTicketSummary} />
         </View>
         <View style={styles.eventContainer}>
           <FlatList
@@ -69,6 +77,17 @@ const styles = StyleSheet.create({
   },
   ImageContainer: {
     // backgroundColor:'black'
+  },
+  ticketSummary: {
+    left: "100%",
+    backgroundColor: "#FF8629",
+    height: 100,
+    width: 100,
+    borderRadius: 5,
+    marginVertical: 40,
+    backgroundColor: "#61dafb",
+    alignItems: "center",
+    justifyContent: "center"
   },
 
   eventContainer: {},
