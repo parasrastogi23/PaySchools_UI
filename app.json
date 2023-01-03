@@ -3,7 +3,7 @@
     "name": "psc-events-mobile-ui",
     "slug": "psc-events-mobile-ui",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "jsEngine": "hermes",

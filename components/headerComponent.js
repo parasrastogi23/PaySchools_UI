@@ -1,7 +1,10 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, Pressable } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
+import SelectDropdown from "react-native-select-dropdown";
+const languages = ["English", "Spanish"];
 
-function HeaderComponent() {
+function HeaderComponent({ CartPress, selectSpanish }) {
   return (
     <View style={styles.rootcontainer}>
       <View style={styles.evenflex}>
@@ -13,13 +16,40 @@ function HeaderComponent() {
       </View>
       <View style={styles.secondContainer}>
         <View style={styles.evenflex}>
-          <Text> Language DropDown</Text>
+          {/* <Pressable
+          onPress={selectSpanish}
+          style={{
+            backgroundColor:'#d3d3d3',
+            padding: 20,
+          }}>
+          <Text>Select spanish</Text>
+        </Pressable> */}
+          {/* <SelectDropdown
+            data={languages}
+            onSelect={(selectedItem, index) => {
+              console.log(selectedItem, index);
+            }}
+            buttonTextAfterSelection={(selectedItem, index) => {
+              // text represented after item is selected
+              // if data array is an array of objects then return selectedItem.property to render after item is selected
+              return selectedItem;
+            }}
+            rowTextForSelection={(item, index) => {
+              // text represented for each item in dropdown
+              // if data array is an array of objects then return item.property to represent item in dropdown
+              return item;
+            }}
+          /> */}
         </View>
-        <View style={styles.carticon}>
-          <FontAwesome name="cart-plus" size={24} color="white" />
-        </View>
-        <View style={styles.evenflex}>
-          <Text> Side Menu</Text>
+        <View style={styles.thirdcontainer}>
+          <Pressable onPress={CartPress} style={styles.carticon}>
+            <View style={styles.carticon}>
+              <FontAwesome name="cart-plus" size={24} color="white" />
+            </View>
+          </Pressable>
+          <View style={styles.sidemenu}>
+            <Entypo name="menu" size={24} color="white" />
+          </View>
         </View>
       </View>
     </View>
@@ -53,5 +83,14 @@ const styles = StyleSheet.create({
   secondContainer: {
     flex: 1,
     flexDirection: "row",
+  },
+  thirdcontainer: {
+    flex: 1,
+    flexDirection: "row",
+  },
+
+  sidemenu: {
+    flex: 1,
+    marginLeft: 25,
   },
 });

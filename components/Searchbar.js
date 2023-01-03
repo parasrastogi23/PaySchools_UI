@@ -7,27 +7,26 @@ import {
   Dimensions,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { useTranslation } from "react-i18next";
 
-function SearchBar({searchPress}) {
+function SearchBar({ searchPress }) {
+  const { t } = useTranslation();
   return (
     <View style={styles.rootContainer}>
-      <Text style={styles.eventText}>Event Search</Text>
-      <TextInput placeholder="Keywords" style={styles.keywordsInput} />
+      <Text style={styles.eventText}>{t("Event Search")}</Text>
+      <TextInput placeholder={t("Keywords")} style={styles.keywordsInput} />
       <TextInput
-        placeholder="Category, events,Org..."
+        placeholder={t("categoty_search")}
         style={styles.eventsInput}
       />
       <View>
         <Pressable style={styles.searchButton} onPress={searchPress}>
           <View style={styles.searchView}>
             <FontAwesome5 name="search" size={18} color="white" />
-            <Text style={styles.searchText}> Search</Text>
+            <Text style={styles.searchText}> {t("Search")}</Text>
           </View>
         </Pressable>
       </View>
-      <Pressable  onPress={CartPress}>
-        <Text style={styles.eventText}>Cart</Text>
-      </Pressable>
     </View>
   );
 }

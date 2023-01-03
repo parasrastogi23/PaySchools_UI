@@ -60,7 +60,7 @@ export const CARTITEMS = [
       subTotal:'10.00'
     }]
   ),new CartItems(
-    'ci1',
+    'ci4',
     'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
     '06-03-2022',
     [{
@@ -79,7 +79,7 @@ export const CARTITEMS = [
     }]
   ),
   new CartItems(
-    'ci2',
+    'ci5',
     'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
     '06-03-2022',
     [{
@@ -91,7 +91,7 @@ export const CARTITEMS = [
     }]
   ),
   new CartItems(
-    'ci3',
+    'ci6',
     'Washington High School Varisity Fooball V/S anywhere High School - Full Chart',
     '06-03-2022',
     [{

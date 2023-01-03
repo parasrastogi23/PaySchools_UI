@@ -1,51 +1,73 @@
 // import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button,
-  TextInput,
-  ScrollView,
-  FlatList,
-  ImageBackground,
-  StatusBar,
-  SafeAreaView,
-} from "react-native";
-import GoalItem from "./components/goalItems";
+import { View, Pressable, Text } from "react-native";
+import React, { useState } from "react";
+import i18n from "./assets/i18n/i18n";
+import { useTranslation } from "react-i18next";
+import { StyleSheet } from "react-native";
 import EventSearchScreen from "./Screens/EventSearchScreen";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import EventDetailsScreen from "./Screens/EventDetailsScreen";
-import ChooseOrderScreen from "./Screens/ChooseOrderScreen";
 
-import CartCheckoutScreen from "./Screens/CartCheckoutScreen"
+import CartCheckoutScreen from "./Screens/CartCheckoutScreen";
 
 export default function App() {
   const stack = createNativeStackNavigator();
-  const MyTheme = {
-    ...DefaultTheme,
-    colors: {
-      ...DefaultTheme.colors,
-      background: "transparent",
-    },
-  };
-  console.log("Heloo world");
+  const { t, i18n } = useTranslation();
 
+  const [currentLanguage, setLanguage] = useState("en");
+
+  const changeLanguage = (value) => {
+    i18n
+      .changeLanguage(value)
+      .then(() => setLanguage(value))
+      .catch((err) => console.log(err));
+  };
   return (
     <>
-    {/* <SafeAreaView>
+      {/* <SafeAreaView>
       
       <StatusBar style="light" />
       <ImageBackground source={require("./assets/background-application.png")}> */}
-        <NavigationContainer theme={MyTheme}>
-          <stack.Navigator initialRouteName="Dashboard">
-          <stack.Screen name="Dashboard" component={EventSearchScreen} />
+      
+      <View>
+        <Text style={{ fontWeight: "bold", fontSize: 25, color: "#33A850" }}>
+          {t("select_Language")}
+        </Text>
+        <Pressable
+          onPress={() => changeLanguage("en")}
+          style={{
+            backgroundColor: currentLanguage === "en" ? "#33A850" : "#d3d3d3",
+            padding: 20,
+          }}
+        >
+          <Text>English</Text>
+        </Pressable>
+        <Pressable
+          onPress={() => changeLanguage("es")}
+          style={{
+            backgroundColor: currentLanguage === "es" ? "#33A850" : "#d3d3d3",
+            padding: 20,
+          }}
+        >
+          <Text>Español</Text>
+        </Pressable>
+      </View>
+      <NavigationContainer>
+        <stack.Navigator initialRouteName="Dashboard">
+          <stack.Screen
+            name="Dashboard"
+            component={EventSearchScreen}
+            options={{
+              title: "Dashboard",
+              headerShown: false,
+            }}
+          />
           <stack.Screen name="EventDetails" component={EventDetailsScreen} />
           <stack.Screen name="CartScreen" component={CartCheckoutScreen} />
-          </stack.Navigator>
-        </NavigationContainer>
-        {/* <View>
+        </stack.Navigator>
+      </NavigationContainer>
+      {/* <View>
           <EventSearchScreen />
         </View>
       
